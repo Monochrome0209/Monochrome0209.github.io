@@ -7,7 +7,7 @@ import FormattedDate from '../components/FormattedDate.astro';
 
 type Props = CollectionEntry<'blog'>['data'];
 
-const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+const { title, description, publishedDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <html lang="ja">
@@ -15,12 +15,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <BaseHead title={title} description={description} />
     <style>
       main {
-        width: calc(100% - 2em);
-        max-width: 100%;
+        width: 100%
         margin: 0;
-      }
-      .hero-image {
-        width: 100%;
       }
       .hero-image img {
         display: block;
@@ -29,10 +25,8 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
         box-shadow: var(--box-shadow);
       }
       .prose {
-        width: 720px;
-        max-width: calc(100% - 2em);
+        width: 100%;
         margin: auto;
-        padding: 1em;
         color: rgb(var(--gray-dark));
       }
       .title {
@@ -47,9 +41,16 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
       .date {
         margin-bottom: 0.5em;
         color: rgb(var(--gray));
+        display: flex;
       }
-      .last-updated-on {
+
+      .publishedDate {
         font-style: italic;
+        flex: 1;
+      }
+      .lastUpdatedDate {
+        font-style: italic;
+        flex: 1;
       }
     </style>
   </head>
@@ -58,22 +59,26 @@ const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
     <Header />
     <main>
       <article>
-        <div class="hero-image">
           {
             heroImage && (
               <img width={1020} height={510} src={heroImage} alt="" />
             )
           }
-        </div>
         <div class="prose">
           <div class="title">
             <div class="date">
-              <FormattedDate date={pubDate} />
+              {
+                publishedDate && (
+                  <span class="publishedDate">
+                    Published on <FormattedDate date={publishedDate} />
+                  </span>
+                )
+              }
               {
                 updatedDate && (
-                  <div class="last-updated-on">
+                  <span class="lastUpdatedDate">
                     Last updated on <FormattedDate date={updatedDate} />
-                  </div>
+                  </span>
                 )
               }
             </div>

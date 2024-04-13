@@ -6,7 +6,7 @@ import { SITE_TITLE } from '../consts';
 <header>
   <nav>
     <h2><a href="/">{SITE_TITLE}</a></h2>
-    <div class="internal-links">
+    <div class="links">
       <HeaderLink href="/">Home</HeaderLink>
       <HeaderLink href="/blog">Blog</HeaderLink>
       <HeaderLink href="/about">About</HeaderLink>
@@ -31,19 +31,12 @@ import { SITE_TITLE } from '../consts';
     background: white;
     box-shadow: 0 2px 8px rgba(var(--black), 5%);
   }
-  h2 {
-    margin: 0;
-    font-size: 1em;
-  }
 
-  h2 a,
-  h2 a.active {
-    text-decoration: none;
-  }
   nav {
+    width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
   }
   nav a {
     padding: 1em 0.5em;
@@ -55,11 +48,29 @@ import { SITE_TITLE } from '../consts';
     text-decoration: none;
     border-bottom-color: var(--accent);
   }
+
+  h2 {
+    text-align: left;
+    font-size: 1em;
+  }
+  h2 a,
+  h2 a.active {
+    text-decoration: none;
+  }
+
+  .links {
+    margin: 0 auto;
+  }
+
   .social-links,
   .social-links a {
-    display: flex;
+    text-align: right;
   }
   @media (max-width: 720px) {
+    h2 {
+      display: none;
+    }
+
     .social-links {
       display: none;
     }
