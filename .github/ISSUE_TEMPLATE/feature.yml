@@ -2,6 +2,7 @@ name: Feature Issue
 description: 新機能開発のための
 title: "{機能タイトル名}"
 labels: ["enhancement"]
+assignees: "Monochrome0209"
 body:
   - type: markdown
     attributes:
