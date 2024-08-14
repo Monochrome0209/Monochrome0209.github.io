@@ -31,10 +31,10 @@ body:
       label: 発生したOSの種類
       description: "発生したOSの種類をチェックしてください"
       options:
-       - Mac
-       - windows
-       - linux
-       - other
+       - label: Mac
+       - label: windows
+       - label: linux
+       - label: other
     validations:
       required: false
   - type: textarea
