@@ -11,6 +11,5 @@ body:
     attributes:
       label: 機能内容
       placeholder: 新規追加する内容を記載
-      validations:
-        required: true
-      
+    validations:
+      required: true
