@@ -8,6 +8,8 @@
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "lint": "eslint  \"src/**/*.{js,jsx,ts,tsx,scss,astro}\"",
+    "lint:fix": "eslint --fix  \"src/**/*.{js,jsx,ts,tsx,scss,astro}\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,astro}\""
   },
   "dependencies": {
