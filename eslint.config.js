@@ -1,3 +1,5 @@
+const { settings } = require('astro/runtime/client/dev-toolbar/settings.js');
+
 module.exports = {
   // ...
   extends: [
