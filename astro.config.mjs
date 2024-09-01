@@ -9,10 +9,7 @@ export default defineConfig({
   site: 'https://monochrome0209.github.io/',
   integrations: [
     sitemap(),
-    starlight({
-      title: '私の楽しいドキュメントサイト',
-      sidebar: [{ label: 'note', link: '/note' }],
-    }),
+    starlight({ title: '私の楽しいドキュメントサイト' }),
     mdx(),
   ],
 });
