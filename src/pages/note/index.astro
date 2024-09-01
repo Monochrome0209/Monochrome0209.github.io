@@ -1,21 +1,7 @@
 ---
-import BaseHead from '@/components/BaseHead.astro';
-import Header from '@/components/Header.astro';
-import Footer from '@/components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '@/consts';
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
 ---
 
-<!doctype html>
-<html lang="ja">
-  <head>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-  </head>
-  <body>
-    <Header />
-    <main>
-      <h1>Monochrome Blog</h1>
-      <p>Monochromeのブログへようこそ🥳</p>
-    </main>
-    <Footer />
-  </body>
-</html>
+<StarlightPage frontmatter={{ title: '私のカスタムページ' }}>
+  <p>これはカスタムコンポーネントを用いたカスタムページです:</p>
+</StarlightPage>
