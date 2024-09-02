@@ -7,9 +7,5 @@ import starlight from '@astrojs/starlight';
 // https://astro.build/config
 export default defineConfig({
   site: 'https://monochrome0209.github.io/',
-  integrations: [
-    sitemap(),
-    starlight({ title: '私の楽しいドキュメントサイト' }),
-    mdx(),
-  ],
+  integrations: [sitemap(), starlight({ title: '開発責任者備忘録' }), mdx()],
 });

@@ -1,0 +1,16 @@
+---
+import { Aside } from '@astrojs/starlight/components';
+---
+
+<Aside>カスタムタイトルなしのデフォルトの補足情報。</Aside>
+
+<Aside type="caution" title="気を付けて！">
+  カスタムタイトルを指定した警告用の補足情報。
+</Aside>
+
+<Aside type="tip">
+  その他のコンテンツも補足情報に含められます。 ```js //
+  たとえばコードスニペット。 ```
+</Aside>
+
+<Aside type="danger">パスワードは誰にも教えないでください。</Aside>

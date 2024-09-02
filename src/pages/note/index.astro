@@ -1,7 +1,10 @@
 ---
 import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+import TestComponent from '@/components/pages/note/index.astro';
 ---
 
-<StarlightPage frontmatter={{ title: '私のカスタムページ' }}>
+<StarlightPage frontmatter={{ title: 'はじめに' }}>
   <p>これはカスタムコンポーネントを用いたカスタムページです:</p>
+  <TestComponent />
 </StarlightPage>
