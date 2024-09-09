@@ -1,0 +1,15 @@
+---
+import StarlightPage from '@astrojs/starlight/components/StarlightPage.astro';
+
+import { Aside } from '@astrojs/starlight/components';
+---
+
+<StarlightPage frontmatter={{ title: 'はじめに' }}>
+  <p>
+    自分がプロジェクトの開発責任者をする中でまとめた方が良いと感じた内容です。
+  </p>
+  <p>
+    自分用の備忘録として作成しましたが、もしかしたら一文だけでも参考になるかも？と思い公開することにしました。
+  </p>
+  <Aside type="caution" title="注意"> N=1の話である点にご留意ください。 </Aside>
+</StarlightPage>

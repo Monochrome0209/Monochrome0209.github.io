@@ -1,13 +1,15 @@
 {
-  "name": "proper-parallax",
+  "name": "astro-blog",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro dev",
+    "start": "astro start",
     "build": "astro check && astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "lint": "eslint  \"src/**/*.{js,jsx,ts,tsx,scss,astro}\"",
+    "lint:fix": "eslint --fix  \"src/**/*.{js,jsx,ts,tsx,scss,astro}\"",
     "format": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,astro}\""
   },
   "dependencies": {
@@ -15,10 +17,15 @@
     "@astrojs/mdx": "^2.2.1",
     "@astrojs/rss": "^4.0.5",
     "@astrojs/sitemap": "^3.1.1",
+    "@astrojs/starlight": "^0.26.1",
     "astro": "^4.5.9",
     "typescript": "^5.4.3"
   },
   "devDependencies": {
+    "eslint": "^9.9.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-astro": "^1.2.3",
+    "eslint-plugin-prettier": "^5.2.1",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0"
   }
